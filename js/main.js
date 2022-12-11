@@ -2,11 +2,11 @@ Array.from(document.querySelectorAll(".internal-link")).forEach(link => {
     link.addEventListener("click", function(e) {
         e.preventDefault();
         let target = document.querySelector(link.getAttribute("href"));
-        console.log(target.offsetTop);
         window.scrollTo({
             top: target.offsetTop - 120,
             behavior: 'smooth'
-          });
+        });
+        header.classList.toggle("open", false);
     })
 })
 
