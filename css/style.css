@@ -28,7 +28,7 @@ header:before {
 }
 
 #hamburger {
-    display: flex;
+    display: none;
     width: 30px;
     height: 30px;
     justify-content: center;
@@ -89,6 +89,7 @@ header ul li a:hover { text-decoration: underline; }
         visibility: visible;
         opacity: 1;
     }
+    #hamburger { display: flex; }
 }
 
 p { line-height: 1.6; margin: 0 0 20px; }
