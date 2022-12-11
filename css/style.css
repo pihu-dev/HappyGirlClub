@@ -1,0 +1,75 @@
+* { box-sizing: border-box; }
+body { margin: 0; line-height: 1; background-color: #000; color: #fff;     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; font-size: 14px; }
+ul, li { padding: 0; margin: 0; list-style: none; }
+h1,h2,h3,h4,h5,h6, figure { margin: 0; }
+
+
+header {
+    margin: 0 auto;
+    width: 1140px;
+    max-width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center; position: sticky; top: 0;
+    background-color: rgba(0,0,0,0.2);
+    backdrop-filter: blur(5px) brightness(0.4) saturate(0);
+    z-index: 1;
+}
+header ul { display: flex; gap: 30px; }
+header ul li a { color: white; text-decoration: none; text-transform: uppercase; }
+
+p { line-height: 1.6; margin: 0 0 20px; }
+
+section {
+    margin: 0 auto 120px; width: 1140px; max-width: calc(100% - 30px);
+}
+
+section h2 { font-size: 40px; text-transform: uppercase; margin-bottom: 20px; }
+section h3 { font-size: 20px; text-transform: uppercase; margin-bottom: 10px; }
+
+section#banner {
+    position: relative;
+}
+
+section#banner #logo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+section#about {
+    display: flex;
+    gap: 30px;
+}
+
+section#about .images {
+    min-width: 30%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+section#about .images img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+section#roadmap h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+section#roadmap article {
+    display: flex;
+    gap: 100px;
+    width: 900px;
+    margin: 0 auto 40px;
+    align-items: center;
+}
+
+section#roadmap article:nth-of-type(2) {
+    flex-direction: row-reverse;
+}
