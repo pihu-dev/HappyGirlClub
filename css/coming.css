@@ -23,7 +23,7 @@ p { text-transform: uppercase; font-weight: 600; font-size: 24px; margin: 30px 0
 footer { margin-top: 40px; color: #000; }
 footer div { margin-bottom: 5px; }
 footer a {
-    color: inherit;
+    color: inherit; font-weight: 700;
 }
 
 @media (max-width: 768px) {
