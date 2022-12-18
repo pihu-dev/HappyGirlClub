@@ -1,20 +1,33 @@
 :root {
-    --bg: rgb(19,21,33);
+    --bg: #f5d81a;
+}
+
+@font-face {
+    font-family: "BabaPro-Bold";
+    src: url(BabaPro-Bold.ttf);
 }
 
 * { box-sizing: border-box; }
 html { height: 100%; }
-body { margin: 0; line-height: 1; background-color: var(--bg); color: #2196f3; font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; font-size: 14px; text-align: center; display: flex; justify-content: center; align-items: center; flex-direction: column; min-height: 100%;}
+body { margin: 0; line-height: 1; background-color: var(--bg); color: #630098; font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; font-size: 14px; text-align: center; display: flex; justify-content: center; align-items: center; flex-direction: column; min-height: 100%;}
 ul, li { padding: 0; margin: 0; list-style: none; }
 h1,h2,h3,h4,h5,h6, figure { margin: 0; }
 
-img { width: 300px; max-width: calc(100% - 30px); margin-top: 40px; }
+#logo { width: 140px;
+    margin-bottom: 15px;  }
+figure img { width: 300px; max-width: calc(100% - 30px); margin-top: 40px; }
 
-h1 { text-transform: uppercase; font-size: 50px;}
-p { text-transform: uppercase; font-weight: 600; font-size: 24px; margin: 30px 0 0; }
+h1 { text-transform: uppercase; font-size: 50px; font-family: "BabaPro-Bold"; }
+p { text-transform: uppercase; font-weight: 600; font-size: 24px; margin: 30px 0 0; color: #000;  }
 
-footer { margin-top: 40px; }
+footer { margin-top: 40px; color: #000; }
 footer div { margin-bottom: 5px; }
 footer a {
-    color: #2196f3;
+    color: inherit;
+}
+
+@media (max-width: 768px) {
+    #logo { width: 110px; }
+    h1 { font-size: 30px; }
+    p { font-size: 18px;}
 }
