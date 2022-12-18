@@ -15,3 +15,6 @@ p { text-transform: uppercase; font-weight: 600; font-size: 24px; margin: 30px 0
 
 footer { margin-top: 40px; }
 footer div { margin-bottom: 5px; }
+footer a {
+    color: #2196f3;
+}
