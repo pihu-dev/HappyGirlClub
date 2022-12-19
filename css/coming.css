@@ -18,7 +18,8 @@ h1,h2,h3,h4,h5,h6, figure { margin: 0; }
 figure img { width: 300px; max-width: calc(100% - 30px); margin-top: 40px; border: solid 2px black; }
 
 h1 { text-transform: uppercase; font-size: 50px; font-family: "BabaPro-Bold"; }
-p { text-transform: uppercase; font-weight: 600; font-size: 24px; margin: 30px 0 0; color: #000;  }
+p { font-weight: 600; font-size: 24px; margin: 30px 0 0; color: #000;  }
+p span { color: #630098; font-weight: 700; }
 
 footer { margin-top: 40px; color: #000; }
 footer div { margin-bottom: 5px; }

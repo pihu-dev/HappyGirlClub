@@ -17,7 +17,7 @@
 <body>
     <img src="images/hcg1.png" alt="" id="logo">
     <h1>Happy Girls Club</h1>
-    <p>Website launching soon</p>
+    <p>WEBSITE LAUNCHING IN <span id="h">00</span>h <span id="m">00</span>m <span id="s">00</span>s</p>
     <figure>
         <img src="images/ezgif-4-304f640c22.gif" alt="">
     </figure>
@@ -25,5 +25,35 @@
         <div>Verified ERC-721 Contract:</div>
         <a href="https://etherscan.io/address/0x15bF9950695AA1bb8F8Bd028f2b5A7357891fA11" target="_blank">0x15bF9950695AA1bb8F8Bd028f2b5A7357891fA11</a>
     </footer>
+
+    <script>
+        let date = new Date(Date.UTC(2022, 11, 20, 5, 0, 0));
+        let utcDate = new Date(date.toLocaleString('en-US', { timeZone: "UTC" }));
+
+        let interval = setInterval(() => {
+            let nw = new Date();
+            let diff = utcDate - nw;
+            let _h = 0, _m = 0, _s = 0;
+
+            if (diff >= 0) {
+                let seconds = diff/1000;
+                let mins = seconds/60;
+                let hours = mins/60;
+
+                _h = Math.floor(hours)
+                _m = Math.floor(mins % 60)
+                _s = Math.floor(seconds % 60)
+
+                // console.log(hours, mins, seconds)
+            } else {
+                clearInterval(interval)
+            }
+
+            document.getElementById("h").innerText = _h.toString().padStart(2, "0")
+            document.getElementById("m").innerText = _m.toString().padStart(2, "0")
+            document.getElementById("s").innerText = _s.toString().padStart(2, "0")
+
+        }, 1000)
+    </script>
 </body>
 </html>
