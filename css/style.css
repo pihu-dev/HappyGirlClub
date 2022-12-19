@@ -1,10 +1,14 @@
 :root {
     --bg: rgb(19,21,33);
 }
+@font-face {
+    font-family: "BabaPro-Bold";
+    src: url(BabaPro-Bold.ttf);
+}
 
 
 * { box-sizing: border-box; }
-body { margin: 0; line-height: 1; background-color: var(--bg); color: #fff;     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; font-size: 14px; }
+body { margin: 0; line-height: 1; background-color: var(--bg); color: #fff; font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; font-size: 14px; }
 ul, li { padding: 0; margin: 0; list-style: none; }
 h1,h2,h3,h4,h5,h6, figure { margin: 0; }
 
@@ -62,8 +66,29 @@ header.open #hamburger .line:nth-child(2) {
 
 
 header ul { display: flex; gap: 30px; z-index: 1; }
-header ul li a { color: white; text-decoration: none; text-transform: uppercase; padding: 10px 0; display: inline-block;}
+header ul li a { text-decoration: none; text-transform: uppercase; padding: 10px 0; display: inline-block; color: inherit; }
 header ul li a:hover { text-decoration: underline; }
+header .social {
+    display: flex;
+    position: relative;
+    margin-left: auto;
+    gap: 10px;
+}
+
+header .social a {
+    background: #fff;
+    border-radius: 100%;
+    padding: 6px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .social a img {
+    width: 100%;
+}
 @media (max-width: 1024px) {
     header { height: 60px; }
     header.open:before { background-color: var(--bg); }
@@ -110,6 +135,41 @@ section h3 { font-size: 20px; text-transform: uppercase; margin-bottom: 10px; }
     section h3 { font-size: 18px; margin-bottom: 10px; }
 }
 
+
+
+#logo-banner {
+    font-family: "BabaPro-Bold";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+#logo-banner h1 {
+    font-size: 60px;
+    text-shadow: 0 0 20px #8a3fb1;
+    text-align: center;
+}
+
+#logo-banner img {
+    width: 240px;
+}
+@media (max-width: 1024px) {
+    #logo-banner h1 {
+        font-size: 30px;
+    }
+
+    #logo-banner img {
+        width: 150px;
+    }
+}
+
+
+
+
+
+
+
+
 #banner {
     position: relative;
 }
@@ -125,7 +185,13 @@ section h3 { font-size: 20px; text-transform: uppercase; margin-bottom: 10px; }
     z-index: 1;
     transition: 0.1s;
     opacity: 1;
-    visibility: visible;
+    visibility: visible;background: #fff;
+    padding: 10px;
+    transform: rotateZ(45deg) scale(1.01);
+    transform-origin: top right;
+}
+#banner #logo img{
+transform: rotateZ(-45deg);
 }
 header.open ~ #banner #logo { opacity: 0; visibility: hidden; }
 
@@ -181,3 +247,48 @@ header.open ~ #banner #logo { opacity: 0; visibility: hidden; }
     #roadmap h2 { margin-bottom: 30px; }
     #roadmap article { flex-direction: column; }
 }
+
+
+#team {
+    text-align: center;
+}
+
+#team .members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+#team .members .member .img {
+    border-radius: 15px; overflow: hidden;
+}
+
+#team .members .member .img img {
+    width: 100%;
+}
+
+#team .members .member .name {
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin: 10px 0;
+}
+@media (max-width: 1024px) {
+    #team .members { gap: 15px; justify-content: space-evenly; }
+    #team .members .member { max-width: 40% }
+    #team .members .member .name { font-size: 18px; }
+
+}
+
+
+footer { text-align: center; margin-bottom: 60px; display: flex; flex-direction: column; align-items: center; }
+footer img { width: 75px; margin-bottom: 15px; }
+footer small { margin-bottom: 10px; font-size: 14px; margin-bottom: 30px; }
+footer a { color: inherit; margin-top: 5px; font-weight: 700; display: inline-block; }
+
+
+#mission { text-align: center; }
+#mission p { margin: 0 auto 5px; text-align: center; width: 900px; max-width: 100%;  }
+
+#welcome h2 { text-align: center; }
