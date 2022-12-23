@@ -1,0 +1,23 @@
+{
+  "name": "happygirlclub",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch css/about.scss css/about.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pihu-dev/HappyGirlClub.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pihu-dev/HappyGirlClub/issues"
+  },
+  "homepage": "https://github.com/pihu-dev/HappyGirlClub#readme",
+  "dependencies": {
+    "sass": "^1.57.1"
+  }
+}
