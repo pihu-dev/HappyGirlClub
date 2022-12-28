@@ -304,16 +304,16 @@ p {
   text-align: center;
 }
 
+#team .members {
+  display: flex;
+}
 @media (min-width: 1025px) {
   #team .members {
-    display: grid;
     gap: 20px;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   }
 }
 @media (max-width: 1024px) {
   #team .members {
-    display: flex;
     gap: 15px;
     justify-content: center;
     flex-wrap: wrap;
